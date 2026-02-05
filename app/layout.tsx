@@ -1,19 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "@mantine/core/styles.css";
-import "./globals.css";
-import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from "@mantine/core";
-import { theme } from "./theme";
+import { Geist, Geist_Mono, Gowun_Batang } from "next/font/google"; // 0
+import "@mantine/core/styles.css"; // 1
+import "./globals.css"; // 2
+import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from "@mantine/core"; // 3
+import { theme } from "./theme"; // 4
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ // 5
+  variable: "--font-geist-sans", // 6
+  subsets: ["latin"], // 7
+}); // 8
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistMono = Geist_Mono({ // 9
+  variable: "--font-geist-mono", // 10
+  subsets: ["latin"], // 11
+}); // 12
+
+const gowunBatang = Gowun_Batang({ // 13
+  weight: ["400", "700"], // 14
+  variable: "--font-gowun-batang", // 15
+  subsets: ["latin"], // 16
+}); // 17
 
 export const metadata: Metadata = {
   title: "Mind Weather",
@@ -31,7 +37,7 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${gowunBatang.variable} antialiased`}
       >
         <MantineProvider theme={theme}>{children}</MantineProvider>
       </body>

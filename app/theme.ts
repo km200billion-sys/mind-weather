@@ -36,7 +36,7 @@ export const theme = createTheme({
     defaultRadius: "xl",
     fontFamily: "var(--font-geist-sans), sans-serif",
     headings: {
-        fontFamily: "var(--font-geist-mono), sans-serif", // Using mono for now as 'Serif' placeholder
+        fontFamily: "var(--font-gowun-batang), serif",
     },
     components: {
         Button: {
